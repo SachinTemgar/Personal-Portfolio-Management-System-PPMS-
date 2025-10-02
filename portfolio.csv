@@ -1,0 +1,12 @@
+Asset Name,Asset Type,Current Price,Quantity,Value
+AAPL,Stock,173.43,10.0,1734.29
+TSLA,Stock,167.75,5.0,838.74
+AMZN,Stock,127.98,12.0,1535.77
+GOOG,Stock,151.95,17.0,2583.13
+NFLX,Stock,930.05,2.0,1860.11
+BTC,Crypto,80001.87,1.0,80001.87
+
+Goal Name,Target Value,Deadline
+Retirement,1000000.00,Fri Dec 30 19:00:00 EST 2050
+Buy a House,500000.00,Mon Dec 31 19:00:00 EST 2029
+Long Term,1000000.00,Fri Apr 20 20:00:00 EDT 2029
