@@ -1,0 +1,63 @@
+Project Title:
+Personal Portfolio Management System (PPMS)
+
+Requirements
+Java 17+
+Eclipse IDE
+JavaFX SDK (added to --module-path)
+MongoDB (local or cloud instance)
+Gson library
+Internet connection (for live API price fetch using Finnhub.io)
+
+Project Structure
+
+src/
+ ├── LoginPage.java             # Entry point of the application
+ ├── PPMSApp.java               # Main app dashboard after login
+ ├── AdminPage.java             # Admin interface
+ ├── panels/
+ │    ├── DashboardPanel.java   # Shows asset summary + ticker
+ │    ├── ManageAssetsPanel.java# Add/edit/delete/sort assets
+ │    ├── VisualizePanel.java   # Risk-based graphs using heap/graph
+ │    ├── ReportsPanel.java     # CSV export & rebalancing
+ │    └── GoalsPanel.java       # Goal setting and progress
+ ├── data/
+ │    ├── Asset.java            # Model class for assets
+ │    ├── Goal.java             # Model class for financial goals
+ ├── util/
+ │    ├── SortingUtil.java      # Merge sort logic
+ │    ├── PriceSimulator.java   # Random price generator (simulator)
+ │    ├── MaxHeapImpl.java      # Custom max heap for top-risk assets
+ │    ├── AdjacencyListGraph.java# Asset correlation graph
+ └── db/
+      ├── MongoDBConnection.java# MongoDB connector
+
+
+
+How to Run the Project
+
+Step 1: Setup JavaFX
+Download JavaFX SDK from https://openjfx.io/
+Add the lib folder path to your VM arguments:
+
+Add Gson Library
+Download Gson from https://repo1.maven.org/maven2/com/google/code/gson/gson/
+Add the JAR file to your project’s classpath
+In Eclipse: right-click → Build Path → Add External JARs...
+
+Step 2: Start MongoDB
+Make sure MongoDB is running locally
+Or update the connection string in MongoDBConnection.java to use your cloud cluster
+
+Step 3: Launch the App
+Run the LoginPage.java file. It opens the login interface.
+
+You can log in with:
+admin/admin → AdminPage
+Or any user stored in the MongoDB "user" collection → PPMSApp
+
+
+External Integrations:
+Finnhub API (https://finnhub.io)
+Used to fetch live asset prices
+Default key is provided; replace with your own if needed
